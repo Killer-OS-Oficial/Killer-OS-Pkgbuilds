@@ -11,7 +11,7 @@ sha256sums=('SKIP')
 install=$pkgname.install
 
 package() {
-  cd ${pkgname} || return
+  cd Killer-OS-Bspwm-Skel/ || return
   mkdir -p "${pkgdir}/usr/bin"
   mkdir -p "${pkgdir}/usr/bin-bspwm"
   mkdir -p "${pkgdir}/etc/skel"

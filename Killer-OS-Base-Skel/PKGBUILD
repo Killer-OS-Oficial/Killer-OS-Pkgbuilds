@@ -11,7 +11,7 @@ source=("git+$url.git")
 sha256sums=('SKIP')
 
 package() {
-  cd ${pkgname} || return
+  cd Killer-OS-Base-Skel/ || return
   install -d $pkgdir/etc
 
   cp -rf etc/. $pkgdir/etc
