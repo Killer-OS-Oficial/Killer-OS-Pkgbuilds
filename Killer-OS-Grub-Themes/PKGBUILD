@@ -1,0 +1,21 @@
+pkgname=killer-os-grub-themes
+pkgver=1.0
+pkgrel=1
+pkgdesc='Grub themes'
+url="https://github.com/Killer-OS-Oficial/Killer-OS-Themes"
+arch=("any")
+groups=('killer-os')
+license=("GPL2")
+depends=('grub')
+source=("git+${url}.git")
+sha256sums=('SKIP')
+
+package() {
+  cd Killer-OS-Themes/grub/ || return
+  mkdir -p "${pkgdir}/usr/share/grub/themes"
+  cp -rf Stylish "${pkgdir}/usr/share/grub/themes"
+  cp -rf crimson "${pkgdir}/usr/share/grub/themes"
+  cp -rf Slaze "${pkgdir}/usr/share/grub/themes"
+  cp -rf Tela "${pkgdir}/usr/share/grub/themes"
+  cp -rf Vimix "${pkgdir}/usr/share/grub/themes"
+}

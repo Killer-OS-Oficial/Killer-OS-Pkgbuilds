@@ -1,0 +1,26 @@
+pkgname=killer-os-base-skel
+pkgdesc='Configuracion base'
+pkgver=1.0
+pkgrel=1
+arch=('any')
+url="https://github.com/Killer-OS-Oficial/Killer-OS-Base-Skel"
+license=('GPL')
+groups=('killer-os')
+depends=('git')
+source=("git+$url.git")
+sha256sums=('SKIP')
+
+package() {
+  cd ${pkgname} || return
+  install -d $pkgdir/etc
+
+  cp -rf etc/. $pkgdir/etc
+
+  install -d $pkgdir/usr/lib/firefox/browser/defaults/preferences
+  # mkdir -p $pkgdir/usr/lib/firefox/browser/defaults/preferences
+  install -Dm644 firefox/distribution.ini $pkgdir/etc/killer-os-firefox.ini
+  install -Dm644 firefox/all-companyname.js $pkgdir/usr/lib/firefox/browser/defaults/preferences/all-companyname.js
+
+  install -Dm644 firefox/firefox-pre.hook $pkgdir/etc/pacman.d/hooks/firefox-pre.hook
+  install -Dm644 firefox/firefox-post.hook $pkgdir/etc/pacman.d/hooks/firefox-post.hook
+}
