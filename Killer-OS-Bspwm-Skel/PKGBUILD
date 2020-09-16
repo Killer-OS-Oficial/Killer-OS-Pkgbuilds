@@ -1,7 +1,7 @@
 pkgname=killer-os-bspwm-skel
 pkgdesc='Configuracion Bspwm'
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 arch=('any')
 url="https://github.com/Killer-OS-Oficial/Killer-OS-Bspwm-Skel"
 license=('GPL')
