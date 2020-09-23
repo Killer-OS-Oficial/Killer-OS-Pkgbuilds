@@ -1,6 +1,6 @@
 pkgname=killer-os-grub-themes
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Grub themes'
 url="https://github.com/Killer-OS-Oficial/Killer-OS-Themes"
 arch=("any")

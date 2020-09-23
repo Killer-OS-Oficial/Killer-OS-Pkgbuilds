@@ -1,7 +1,7 @@
 pkgname=killer-os-base-skel
 pkgdesc='Configuracion base'
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 arch=('any')
 url="https://github.com/Killer-OS-Oficial/Killer-OS-Base-Skel"
 license=('GPL')
